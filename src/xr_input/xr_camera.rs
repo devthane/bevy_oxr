@@ -127,7 +127,7 @@ pub struct XrCameraBundle {
     pub root_transform: RootTransform,
 }
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Hash, Ord, PartialOrd, Component, ExtractComponent)]
-pub struct XrCamera(Eye);
+pub struct XrCamera(pub Eye);
 
 #[derive(Component, ExtractComponent, Clone, Copy, Debug, Default, Deref, DerefMut)]
 pub struct RootTransform(pub GlobalTransform);

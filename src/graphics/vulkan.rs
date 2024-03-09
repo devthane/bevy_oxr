@@ -48,6 +48,9 @@ pub fn initialize_xr_instance(
 
     assert!(available_extensions.raw().khr_vulkan_enable2);
     // info!("available OpenXR extensions: {:#?}", available_extensions);
+    
+    info!("other extensions: {:?}", available_extensions.raw().other);
+    info!("scene available?: {}", available_extensions.raw().fb_scene);
 
     let mut enabled_extensions: xr::ExtensionSet =
         (available_extensions & reqeusted_extensions).into();
